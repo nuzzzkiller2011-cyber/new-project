@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TEAM DANJER KILLER — Enter The Battle</title>
+<meta name="description" content="TEAM DANJER KILLER — official digital world. Gaming, esports, community.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-logo" data-team-name>TEAM DANJER KILLER</div>
+  <div class="loader-sub">INITIALIZING BATTLE SYSTEM...</div>
+  <div class="loader-bar-track"><div class="loader-bar-fill"></div></div>
+</div>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- BACKGROUND PARTICLES -->
+<canvas id="particle-canvas"></canvas>
+
+<!-- NAV -->
+<nav id="site-nav">
+  <a href="#hero" class="nav-logo"><span class="mark"></span><span data-team-name>TEAM DANJER KILLER</span></a>
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#scene-players">Team</a></li>
+    <li><a href="#scene-battle">Battle</a></li>
+    <li><a href="#scene-tiktok">TikTok</a></li>
+    <li><a href="#scene-gallery">Gallery</a></li>
+    <li><a href="#site-footer">Social</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu">
+  <a href="#hero"><span>01</span>Home</a>
+  <a href="#scene-players"><span>02</span>Team</a>
+  <a href="#scene-battle"><span>03</span>Battle</a>
+  <a href="#scene-tiktok"><span>04</span>TikTok</a>
+  <a href="#scene-gallery"><span>05</span>Gallery</a>
+  <a href="#site-footer"><span>06</span>Social</a>
+</div>
+
+<!-- VERTICAL SOCIAL RAIL -->
+<div class="social-rail">
+  <button id="like-btn" class="like" aria-label="Like">
+    <span class="icon">❤️</span><span class="label">Like</span>
+  </button>
+  <button id="team-btn" aria-label="Jump to team">
+    <span class="icon">💬</span><span class="label">Team</span>
+  </button>
+  <button id="share-btn" aria-label="Share">
+    <span class="icon">↗</span><span class="label">Share</span>
+  </button>
+  <a href="#" target="_blank" rel="noopener" data-tiktok-link aria-label="Follow on TikTok">
+    <span class="icon">🎵</span><span class="label">TikTok</span>
+  </a>
+</div>
+
+<!-- SOUND TOGGLE -->
+<button id="sound-toggle" aria-label="Sound off">🔇</button>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="scene in-view" id="hero">
+    <div class="scene-bg hero-bg">
+      <div class="beam"></div><div class="beam"></div><div class="beam"></div>
+      <div class="grid-overlay"></div>
+      <div class="scanlines"></div>
+      <div class="noise-vignette"></div>
+    </div>
+    <div class="scene-inner hero-content">
+      <div class="hero-logo-stage">
+        <div class="hero-logo">
+          <span>TEAM</span>
+          <span class="line2">DANJER KILLER</span>
+        </div>
+      </div>
+      <div class="hero-kicker" data-tagline>ENTER THE BATTLE</div>
+      <div class="hero-tags" data-subtagline>GAMING • ESPORTS • COMMUNITY</div>
+      <div class="hero-cta">
+        <a href="#scene-welcome" class="btn btn-primary">Enter Team</a>
+        <a href="#scene-tiktok" class="btn btn-ghost">Follow On TikTok</a>
+      </div>
+    </div>
+    <div class="scroll-hint"><span>SCROLL</span><div class="stick"></div></div>
+  </section>
+
+  <!-- ============ SCENE 01 — WELCOME ============ -->
+  <section class="scene" id="scene-welcome">
+    <div class="scene-bg">
+      <div class="grid-overlay"></div>
+      <div class="noise-vignette"></div>
+    </div>
+    <div class="scene-inner">
+      <div class="eyebrow">Scene 01</div>
+      <div class="welcome-logo" data-team-name>TEAM DANJER KILLER</div>
+      <h2 class="scene-title">Welcome To The Squad</h2>
+      <p class="scene-text">A collective built on precision, aggression, and trust. Every round, every clip, every clutch — this is where it lives.</p>
+      <div class="hero-cta">
+        <a href="#scene-players" class="btn btn-primary">Enter Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCENE 02 — PLAYERS ============ -->
+  <section class="scene" id="scene-players">
+    <div class="scene-bg">
+      <div class="grid-overlay"></div>
+      <div class="noise-vignette"></div>
+    </div>
+    <div class="scene-inner">
+      <div class="eyebrow">Scene 02</div>
+      <h2 class="scene-title">The Players</h2>
+      <p class="scene-text">Four roles. One instinct. Tap a card to open a full cinematic profile.</p>
+      <div class="players-grid" id="players-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ SCENE 03 — BATTLE / STATS ============ -->
+  <section class="scene" id="scene-battle">
+    <div class="scene-bg">
+      <div class="grid-overlay"></div>
+      <div class="noise-vignette"></div>
+    </div>
+    <div class="scene-inner">
+      <div class="eyebrow">Scene 03</div>
+      <h2 class="scene-title">The Battle</h2>
+      <p class="scene-text">Every stat here was earned in a live server, not a menu.</p>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-value" data-stat="matches" data-suffix="+">0+</div><div class="stat-label">Matches</div></div>
+        <div class="stat-card"><div class="stat-value" data-stat="wins" data-suffix="+">0+</div><div class="stat-label">Wins</div></div>
+        <div class="stat-card"><div class="stat-value" data-stat="kills" data-suffix="+">0+</div><div class="stat-label">Kills</div></div>
+        <div class="stat-card"><div class="stat-value" id="rank-stat" data-stat="rank">ELITE</div><div class="stat-label">Rank</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCENE 04 — TIKTOK ============ -->
+  <section class="scene" id="scene-tiktok">
+    <div class="scene-bg">
+      <div class="grid-overlay"></div>
+      <div class="noise-vignette"></div>
+    </div>
+    <div class="scene-inner">
+      <div class="eyebrow">Scene 04</div>
+      <div class="welcome-logo" data-team-name>TEAM DANJER KILLER</div>
+      <h2 class="scene-title">Follow Our Journey</h2>
+      <div class="tiktok-card" id="tiktok-video-card" role="button" tabindex="0" aria-label="Open TikTok">
+        <span class="play-glyph">▶</span>
+        <div class="tiktok-badge">
+          <span data-team-name>TEAM DANJER KILLER</span>
+          <small>Tap to watch on TikTok</small>
+        </div>
+      </div>
+      <a href="#" target="_blank" rel="noopener" data-tiktok-link class="btn btn-primary" style="margin-top:26px;">Follow On TikTok</a>
+    </div>
+  </section>
+
+  <!-- ============ SCENE 05 — GALLERY ============ -->
+  <section class="scene" id="scene-gallery">
+    <div class="scene-bg">
+      <div class="grid-overlay"></div>
+      <div class="noise-vignette"></div>
+    </div>
+    <div class="scene-inner">
+      <div class="eyebrow">Scene 05</div>
+      <h2 class="scene-title">Gallery &amp; Honors</h2>
+      <p class="scene-text">Milestones from the server room to the main stage.</p>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- PLAYER PROFILE OVERLAY -->
+<div id="profile-overlay" aria-hidden="true">
+  <div class="profile-panel">
+    <button class="profile-close" id="profile-close" aria-label="Close profile">✕</button>
+    <div class="profile-avatar" id="profile-avatar-wrap"></div>
+    <div>
+      <div class="profile-name" id="profile-name"></div>
+      <div class="profile-meta" id="profile-meta"></div>
+      <p class="profile-bio" id="profile-bio"></p>
+      <div class="profile-stats">
+        <div><b id="profile-matches"></b><span>Matches</span></div>
+        <div><b id="profile-wins"></b><span>Wins</span></div>
+        <div><b id="profile-kills"></b><span>Kills</span></div>
+        <div><b id="profile-favgame"></b><span>Favorite Game</span></div>
+      </div>
+      <div class="profile-achievements">
+        <h4>Achievements</h4>
+        <ul id="profile-achievements"></ul>
+      </div>
+      <div class="profile-section-label">Connect</div>
+      <div class="profile-links" id="profile-links"></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="site-footer">
+  <div class="footer-logo" data-team-name>TEAM DANJER KILLER</div>
+  <div class="footer-tag" data-subtagline>GAMING • ESPORTS • COMMUNITY</div>
+  <div class="footer-credits">
+    DEVELOPED BY <b data-developer>MATHRA QUOTES</b><br>
+    CREATOR: <b data-creator>DENUWAN AKASH</b><br>
+    © <span data-year>2026</span> <span data-team-name>TEAM DANJER KILLER</span>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
